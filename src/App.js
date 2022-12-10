@@ -1,14 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Greetings from './Greetings';
 function App() {
-  let isMorning = (new Date()).getHours() < 12;
-  let greetingElement = isMorning
-   ? <h3>Good Morning!</h3> : <h3>Good Evening!</h3>
   let url = "https://reactjs.org"
   return (
     <div className="App">
-      {greetingElement}
+      <Greetings />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
