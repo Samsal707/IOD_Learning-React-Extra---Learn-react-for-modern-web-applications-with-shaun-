@@ -2,16 +2,21 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  let isMorning = (new Date()).getHours() < 12;
+  let greetingElement = isMorning
+   ? <h3>Good Morning!</h3> : <h3>Good Evening!</h3>
+  let url = "https://reactjs.org"
   return (
     <div className="App">
+      {greetingElement}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          React is cool.
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href={url}
           target="_blank"
           rel="noopener noreferrer"
         >
